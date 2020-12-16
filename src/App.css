@@ -21,6 +21,13 @@ body {
   background-image: url("./img/dark-theme.jpg");
 }
 
+.theme--dark .label {
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgba(255, 255, 255, 0.8);
+  align-self: flex-start;
+}
+
 .theme--light {
   background-image: url("./img/light-theme.jpg");
 }

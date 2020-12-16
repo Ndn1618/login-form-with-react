@@ -9,7 +9,7 @@ function App() {
         <section className='py-5 login-from-section'>
           <div className="login-form-wrapper container p-5 rounded">
             <h2 className='text-center mb-3'>User Login</h2>
-            <form className='d-flex flex-column justify-content-center bg-light shadow-lg p-4 rounded' action='https://echo.htmlacademy.ru' method='POST'>
+            <form className='login-form d-flex flex-column justify-content-center bg-light shadow-lg p-4 rounded' action='https://echo.htmlacademy.ru' method='POST'>
               <label className='h5' htmlFor='username-input'>Username</label>
               <input className='form-control mb-4' id='username-input' type='text' name='username' placeholder='Username' autoComplete='off' />
               <label className='h5' htmlFor='password-input'>Password</label>
