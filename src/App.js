@@ -10,13 +10,13 @@ function App() {
     <>
       <div className={theme}>
         <h1 className='sr-only'>Login Form with React.js</h1>
-        <div className={themeMode.togglerText}>
+        <label htmlFor='theme-toggler' className={themeMode.togglerText}>
           <label class="switch mr-3">
-            <input onChange={ () => theme === 'light' ? setTheme('dark') : setTheme('light')} type="checkbox" />
+            <input onChange={ () => theme === 'light' ? setTheme('dark') : setTheme('light')} type="checkbox" id='theme-toggler' />
             <span class="slider round"></span>
           </label>
           Switch {theme === 'light' ? 'dark' : 'light'} theme
-        </div>
+        </label>
         <section className='py-5 login-from-section'>
           <div className="login-form-wrapper container p-5 rounded">
             <h2 className={themeMode.loginHeading}>User Login</h2>
