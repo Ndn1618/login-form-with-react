@@ -12,10 +12,10 @@ function App() {
         <h1 className='sr-only'>Login Form with React.js</h1>
         <div className={themeMode.togglerText}>
           <label class="switch mr-3">
-            <input onChange={ () => setTheme('dark')} type="checkbox" />
+            <input onChange={ () => theme === 'light' ? setTheme('dark') : setTheme('light')} type="checkbox" />
             <span class="slider round"></span>
           </label>
-          Switch dark theme
+          Switch {theme === 'light' ? 'dark' : 'light'} theme
         </div>
         <section className='py-5 login-from-section'>
           <div className="login-form-wrapper container p-5 rounded">
