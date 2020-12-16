@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import {darkTheme, lightTheme} from './Components/Themes'
 import './App.css';
 
 function App() {
   const [theme, setTheme] = useState('light')
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const passwordRef = useRef(null)
 
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
               <label className={themeMode.loginLabel} htmlFor='username-input'>Username</label>
               <input className='form-control mb-4' id='username-input' type='text' name='username' placeholder='Username' autoComplete='off' />
               <label className={themeMode.loginLabel} htmlFor='password-input'>Password</label>
-              <input className='form-control mb-4' id='password-input' type='password' name='password' placeholder='Password' />
+              <input ref={passwordRef} className='form-control mb-4' id='password-input' type='password' name='password' placeholder='Min 6 characters' onChange={ (evt) => evt.target.value.length >= 6 ? passwordRef.current.style = 'border: 2px solid green' : passwordRef.current.style = 'border: 2px solid red'} />
               <button className='btn btn-light border align-self-center px-4 font-weight-bold' type='submit'>Login</button>
             </form>
           </div>
