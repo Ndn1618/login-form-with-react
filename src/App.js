@@ -9,6 +9,7 @@ function App() {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   const passwordRef = useRef(null)
   const usernameRef = useRef(null)
+  const loggedTextRef = useRef(null)
 
   return (
     <>
@@ -21,7 +22,7 @@ function App() {
           </label>
           Switch {theme === 'light' ? 'dark' : 'light'} theme
         </label>
-        <section className='py-5 login-from-section'>
+        <section className='py-3 login-from-section'>
           <div className="login-form-wrapper container p-5 rounded">
             <h2 className={themeMode.loginHeading}>User Login</h2>
             <form className={themeMode.loginForm} action='https://echo.htmlacademy.ru' method='POST'
@@ -44,6 +45,8 @@ function App() {
                   }
 
                   setPasswordErrorText('')
+
+                  loggedTextRef.current.classList.remove('d-none')
                 }}
             >
               <div className='mb-4'>
@@ -58,6 +61,7 @@ function App() {
               </div>
               <button className='btn btn-light border align-self-center px-4 font-weight-bold' type='submit'>Login</button>
             </form>
+            <p ref={loggedTextRef} className='text-center pt-4 h3 text-success d-none'>Logged in successfully!</p>
           </div>
         </section>
       </div>
