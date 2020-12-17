@@ -22,11 +22,24 @@ body {
   background-image: url("./img/dark-theme.jpg");
 }
 
-.dark .label {
+.label {
   padding-left: 7px;
   padding-right: 7px;
+}
+
+.dark .label {
   background-color: rgba(255, 255, 255, 0.8);
   align-self: flex-start;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.dark .toggler-label,
+.dark .login-heading {
+  color: #f8f9fa;
 }
 
 .light {
@@ -38,6 +51,11 @@ body {
   max-width: 500px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.light .login-form {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  background-color: #f8f9fa;
 }
 
 .switch {
